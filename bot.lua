@@ -1,11 +1,11 @@
-local bot_api_key = "246964970:AAHrQafbCRHKhqdXMGlEddMjbTmBYT362pU"
+local bot_api_key = "290350194:AAFUbFGMkP9Sy6icOn7CfXbGQQHqqUdpQr4"
 local BASE_URL = "https://api.telegram.org/bot"..bot_api_key
 local BASE_FOLDER = ""
 local start = [[ ]] 
 
 function is_admin(msg)
   local var = false
-  local admins = {175636120,259071975,219339258,198794027}
+  local admins = {179980428,79900601}
   for k,v in pairs(admins) do
     if msg.from.id == v then
       var = true
@@ -169,7 +169,7 @@ function bot_run()
 
 	bot = bot.result
 
-	local bot_info = "Username = @"..bot.username.."\nName = "..bot.first_name.."\nId = "..bot.id.."\nDeveloper > @ThisIsPouria\nChannel > @CyberTM"
+	local bot_info = "Username = @"..bot.username.."\nName = "..bot.first_name.."\nId = "..bot.id..
 	print(bot_info)
 
 	last_update = last_update or 0
@@ -310,16 +310,16 @@ if msg then
 		local list = userlist(msg)
 	sendMessage(msg.chat.id,list,true,nil,true)
 	
-	elseif msg.text:match("^/version") then
-	sendMessage(msg.chat.id,'*Cyber Support Bot*\n\n[Developer](https://telegram.me/ThisIsPouria)\n[Our Channel](https://telegram.me/CyberTM)\n\n _Bot Version_ : *1.0*',true,nil,true)
+	elseif msg.text:match("^/about") then
+	sendMessage(msg.chat.id,'`این روبات راه ارتباطی شما با تیم مدیریتی پرشین لئوپارد میباشد`\n\n[Channel](https://telegram.me/Leopard_COC)',true,nil,true)
 	
     elseif msg.text:match("^/help") and not is_admin(msg) then
-	sendMessage(msg.chat.id,'*Cyber Support Bot Help:*\n\n\n `-` /version\n`نمایش ورژن ربات`\n\n `-` /nerkh\n`دریافت لیست قیمت ها برای‌خرید گروه`\n\n `-` /start\n`دریافت اطلاعاتی درباره خرید گروه`',true,nil,true)
+	sendMessage(msg.chat.id,'*Persian Leopard Bot Commands:*\n\n\n `-` /about\n`نمایش اطلاعات روبات`\n\n `-` /information\n`دریافت لیست شرایط برای ورود به کلن`',true,nil,true)
 
 	elseif msg.text:match("^/help") and is_admin(msg) then
-	sendMessage(msg.chat.id,'_Black Support Help_ *(For Admin)*\n\n\n `-` /version\n`نمایش ورژن ربات`\n\n `-` /nerkh\n`دریافت لیست قیمت ها برای‌خرید گروه`\n\n `-` /start\n`دریافت اطلاعاتی درباره خرید گروه`\n\n `-` /users\n`نمایش تعداد افرادی که در ربات پیام دادند`\n\n `-` /block [reply]\n`بلاک کردن یک شخص با ریپلی`\n\n `-` /unblock [reply]\n`آنبلاک کردن یک شخص با ریپلی`\n\n `-` /setrealm\n`تنظیم گروه اصلی ربات`\n*نکته : اگر این دستور رو در داخل پیوی ربات بفرستید پیام ها به پیوی شما ارسال میشود*\n\n `-` /startmsg [متن]\nYou Can user {USERNAME} and {FirstName}\n`تنظیم یک متن به عنوان متن استارت`\n*نکته: این زمانی که کاربر دستور /start رو ارسال کنه نمایش داده میشه*\n\n `-` /donemsg [متن]\n`تنظیم یک متن برای تایید ارسال شدن پیام`\n\n `-` /help\n`نمایش تنظیمات ربات`\n\n `-` /clean blocklist\n`حذف کردن کل افراد بلاک شده از لیست بلاک شده ها`\n\n `-` /clean users\n`خالی کردن لیست افرادی که از ربات استفاده کرده اند`',true,nil,true)
+	sendMessage(msg.chat.id,'_Persian Leopard Bot Commands:_ *(For Admin)*\n\n\n `-` /about\n`نمایش اطلاعات روبات`\n\n `-` /information\n`دریافت لیست شرایط ورود به کلن`\n\n `-` /users\n`نمایش تعداد افرادی که در ربات پیام دادند`\n\n `-` /block [reply]\n`بلاک کردن یک شخص با ریپلی`\n\n `-` /unblock [reply]\n`آنبلاک کردن یک شخص با ریپلی`\n\n `-` /setrealm\n`تنظیم گروه اصلی ربات`\n*نکته : اگر این دستور رو در داخل پیوی ربات بفرستید پیام ها به پیوی شما ارسال میشود*\n\n `-` /startmsg [متن]\nYou Can user {USERNAME} and {FirstName}\n`تنظیم یک متن به عنوان متن استارت`\n*نکته: این زمانی که کاربر دستور /start رو ارسال کنه نمایش داده میشه*\n\n `-` /donemsg [متن]\n`تنظیم یک متن برای تایید ارسال شدن پیام`\n\n `-` /help\n`نمایش تنظیمات ربات`\n\n `-` /clean blocklist\n`حذف کردن کل افراد بلاک شده از لیست بلاک شده ها`\n\n `-` /clean users\n`خالی کردن لیست افرادی که از ربات استفاده کرده اند`',true,nil,true)
 
-    elseif msg.text:match("^/nerkh") or msg.text:match("^/plist") or msg.text:match("^/planlist") then
+    elseif msg.text:match("^/information") then
 	sendMessage(msg.chat.id,'*لیست قیمت های خرید گروه با* [Cyber](https://telegram.me/CyberTG)\n\n `-` *1 ماهه* > `5000` _تومان_\n `-` *3 ماهه* > `10000` _تومان_\n `-` *نامحدود* > `15000` _تومان_ ',true,nil,true)
 	
 	elseif msg.text:match("^/clean blocklist") and is_admin(msg) then
