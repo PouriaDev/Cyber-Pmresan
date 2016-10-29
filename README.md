@@ -1,4 +1,4 @@
-# Cyber-Pmresan
+# Leopard-PMresan
 * * *
 # ابتدا فایل بات.لوا رو باز کنید و در خط 1 در قسمت مشخص شده توکنتون رو بزارید
 #در خط 8 هم ایدی عددیتون رو بزارید
@@ -11,7 +11,7 @@ sudo apt-get update
 sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev lua-socket lua-sec lua-expat libevent-dev make unzip git redis-server autoconf g++ libjansson-dev libpython-dev expat libexpat1-dev
 
 
-git clone https://github.com/PouriaDev/Cyber-Pmresan.git
+git clone https://github.com/PouriaDev/Leopard-PMresan.git
 
 cd Cyber-Pmresan
 
@@ -25,12 +25,12 @@ chmod +x launch.sh
 
 /setrealm
 
-/startmsg BlackSuppport Bot
+/startmsg Welcome!
 
 /donemsg Send!
 
 
 End:)
 * * *
- Developer > [Pouria](https://Telegram.me/ThisIsPouria) | 
- [Our Channel](https://Telegram.me/CyberTM)
+ Developer > [Pouria](https://Telegram.me/This_Is_Pouria) | 
+ [Our Channel](https://Telegram.me/Leopard_COC)
